@@ -18,6 +18,8 @@ import xyz.teamgravity.composecustomnavigator.ui.theme.ComposeCustomNavigatorThe
 
 class MainActivity : ComponentActivity() {
 
+    private var time: Long = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -41,7 +43,10 @@ class MainActivity : ComponentActivity() {
                                 }
 
                                 NavigationAction.NavigateUp -> {
-                                    controller.navigateUp()
+                                    if (System.currentTimeMillis() - time > 1_000) {
+                                        controller.navigateUp()
+                                        time = System.currentTimeMillis()
+                                    }
                                 }
                             }
                         }
