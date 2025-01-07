@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">ComposeCustomNavigator</string>
+
+    <!-- Login -->
+    <string name="login">Login</string>
+
+    <!-- Home -->
+    <string name="home">Home</string>
+    <string name="go_to_detail">Go to detail</string>
+
+    <!-- Detail -->
+    <string name="your_id">ID: %1$s</string>
+    <string name="go_back">Go back</string>
 </resources>

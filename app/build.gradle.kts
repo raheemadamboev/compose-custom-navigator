@@ -28,6 +28,9 @@ android {
 
     kotlinOptions {
         jvmTarget = libs.versions.java.target.get()
+        freeCompilerArgs += listOf(
+            "-opt-in=kotlin.uuid.ExperimentalUuidApi"
+        )
     }
 
     buildFeatures {
@@ -67,4 +70,9 @@ dependencies {
 
     // serialization
     implementation(libs.serialization)
+
+    // koin
+    implementation(libs.koin.core)
+    implementation(libs.koin.android)
+    implementation(libs.koin.compose)
 }
